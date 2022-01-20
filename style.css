@@ -1,0 +1,25 @@
+* {
+    border: 1px solid #000;
+}
+
+body, html {
+    height: 100%;
+    margin: 0;
+}
+
+.content {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100%;
+}
+
+.main {
+    width: 30em;
+    height: 30em;
+}
+
+.setting {
+    height: 25em;
+    width: 20em;
+}
