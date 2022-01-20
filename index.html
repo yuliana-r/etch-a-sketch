@@ -1,22 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/f5ed9082ee.js" crossorigin="anonymous"></script>
     <link rel="icon" href="./images/icon.png">
+    <script src="script.js" defer></script>
     <title>Etch-A-Sketch</title>
 </head>
+
 <body>
-    <div class="content">
-        <div class="setting">
 
-        </div>
-        <div class="main">
+    <div class="container">
 
+        <div class="title">
+            <h1>Etch-A-Sketch</h1>
+            <p>Some text and instructions here</p>
         </div>
+
+        <div class="content">
+            <div class="setting">
+
+                <div class="gridInfo">
+                <p>Grid size</p>
+                <p id="currentSize">5 x 5</p>
+                <div class="slidecontainer">
+                    <input type="range" min="2" max="50" value="5" class="slider" id="mySlider">
+                </div>
+            </div>
+
+            <div class="colorInfo">
+                <button>Black</button>
+                <button>White</button>
+                <button>Yellow</button>
+                <button>Orange</button>
+                <button>Rainbow</button>
+                <button>Pastel</button>
+            </div>
+
+            <button>Clear</button>
+
+            </div>
+            <div id="grid">
+            </div>
+        </div>
+
+        <a href="https://github.com/yuliana-r/etch-a-sketch" target="_blank"><i class="fab fa-github"></i>Github</a>
     </div>
-    <script src="script.js"></script>
 </body>
+
 </html>
