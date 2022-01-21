@@ -7,4 +7,4 @@ Completed as part of The Odin Project.
 
 <img src="./images/demo.png">
 
-<a href="https://www.flaticon.com/free-icons/sketch" title="sketch icons">Tab icon source - Flaticon</a>
+<a href="https://www.flaticon.com/free-icons/sketch" target="_blank">Tab icon source - Flaticon</a>
