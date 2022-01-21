@@ -11,57 +11,60 @@
 
 <body>
 
-    <div class="container">
+    <div class="container flex">
 
         <div class="title">
             <h1>Etch-a-Sketch</h1>
         </div>
 
-        <div class="content">
-            <div class="setting">
+        <div class="content flex">
+            <div class="setting flex">
 
-                <div class="gridInfo">
-                <p id="currentSize">15 x 15</p>
-                <div class="slidecontainer">
-                    <input type="range" min="2" max="36" value="15" class="slider" id="mySlider">
+                <div class="gridInfo flex">
+                    <p id="currentSize">18 x 18</p>
+                    <div class="slidecontainer">
+                        <input type="range" min="2" max="36" value="18" class="slider" id="mySlider">
+                    </div>
                 </div>
-                <button id="removeGrid">Remove grid</button>
-            </div>
 
-            <div>
-                <div  class="palette">
-                    <button id="red"></button>
-                    <button id="orange"></button>
-                    <button id="yellow"></button>
-                    <button id="green"></button>
+                <div class="buttons flex">
+                    <button id="reset">reset</button>
+                    <button id="removeGrid">remove grid</button>
                     
                 </div>
+                <p>Pick your colour:</p>
 
-                <div  class="palette">
-                    <button id="blue"></button>
-                    <button id="purple"></button>
-                    <button id="black"></button>
-                    <button id="white"></button>
+                <div class="colours flex">
+
+                    <div class="palette flex">
+                        <button id="red"></button>
+                        <button id="orange"></button>
+                        <button id="yellow"></button>
+                        <button id="green"></button>
+
+                    </div>
+
+                    <div class="palette flex">
+                        <button id="blue"></button>
+                        <button id="purple"></button>
+                        <button id="black"></button>
+                        <button id="white"></button>
+                    </div>
+
+                    <div class="palette flex">
+                        <button id="rainbow"></button>
+                        <button id="pastel"></button>
+                        <button id="mono"></button>
+                        <button id="vintage"></button>
+                    </div>
+
                 </div>
-                
-                <div  class="palette">
-                    <button id="rainbow"></button>
-                    <button id="pastel"></button>
-                    <button id="mono"></button>
-                    <button id="vintage"></button>
-                </div>
-                
             </div>
-
-            
-            <button id="reset">Reset</button>
-
-            </div>
-            <div id="grid">
+            <div id="grid" class="flex">
             </div>
         </div>
 
-        <a href="https://github.com/yuliana-r/etch-a-sketch" target="_blank"><i class="fab fa-github"></i>Github</a>
+        <a href="https://github.com/yuliana-r/etch-a-sketch" target="_blank"><i class="fab fa-github"></i> Github</a>
     </div>
 </body>
 

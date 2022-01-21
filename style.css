@@ -2,7 +2,7 @@
     border: 1px solid #000;
 } */
 
-@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Gloria+Hallelujah&family=Indie+Flower&display=swap');
 
 body,
 html {
@@ -15,52 +15,99 @@ body {
 }
 
 h1 {
-    font-family: 'Indie Flower', cursive;
+    font-family: 'Gloria Hallelujah', cursive;
+    color: #DA627D;
+    font-size: 3.5em;
+    margin: 0;
+}
+
+a {
+    font-family: Arial, Helvetica, sans-serif;
+    text-decoration: none;
+    color: #495057;
+    font-size: 1.2em;
+    margin: 0;
+}
+
+a:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+
+.flex,
+.row {
+    display: flex;
 }
 
 .container,
 .content {
-    display: flex;
     justify-content: center;
     text-align: center;
 }
 
-.container {
+.container,
+.setting,
+.gridInfo,
+.colours,
+#grid {
     flex-direction: column;
+}
+
+.container {
+
     gap: 2em;
     min-height: 100%;
 }
 
 .content {
     align-items: center;
+    gap: 1em;
+}
+
+.setting {
+    justify-content: space-around;
+    align-items: center;
+    height: 25em;
+    width: 20em;
+    gap: 1em;
+}
+
+.gridInfo {
+    justify-content: center;
+    gap: 1em;
+    width: 100%;
+}
+
+.colours {
+    width: 100%;
+    gap: 1.5em;
+}
+
+.palette {
+    justify-content: space-evenly;
+}
+
+.buttons {
+    gap: 1.5em;
 }
 
 #grid {
-    display: flex;
-    flex-direction: column;
     background-color: #fff;
     width: 550px;
     height: 550px;
+    border: 1px solid #ADB5BD;
 }
 
-.row {
-    display: flex; 
+.row,
+.pixel {
     flex: 1 0 auto;
 }
 
 .pixel {
-    flex: 1 0 auto;
-    border: 1px solid #e9ecef;
+    border: 1px solid #f8f9fa;
 }
 
-.setting {
-    height: 25em;
-    width: 20em;
-}
-
-.slidecontainer {
-    width: 100%;
-}
 
 .slider {
     -webkit-appearance: none;
@@ -68,7 +115,7 @@ h1 {
     width: 75%;
     height: 5px;
     border-radius: 5px;
-    background: #ced4da;
+    background: #ADB5BD;
     outline: none;
     opacity: 0.8;
     -webkit-transition: .4s;
@@ -85,7 +132,7 @@ h1 {
     width: 20px;
     height: 20px;
     border-radius: 50%;
-    background: #495057;
+    background: #DA627D;
     cursor: pointer;
 }
 
@@ -93,26 +140,88 @@ h1 {
     width: 25px;
     height: 25px;
     border-radius: 50%;
-    background: #04AA6D;
     cursor: pointer;
 }
 
 .palette>button {
     border-radius: 100%;
-    width: 3em;
-    height: 3em;
-    border: 1px solid #6c757d;
+    width: 3.5em;
+    height: 3.5em;
+    border: 1px solid #ADB5BD;
 }
 
-#red {background-color: #c81d25;}
-#orange {background-color: #f8961e;}
-#yellow {background-color: #fad643;}
-#green {background-color: #5fad56;}
-#blue {background-color: #4ea8de;}
-#purple {background-color: #b185db;}
-#black {background-color: #000;}
-#white {background-color: #fff;}
-#rainbow {background-image: linear-gradient(to right, #54478c, #048ba8, #83e377, #efea5a, #f29e4c);}
-#pastel {background-image: linear-gradient(to right, #fbf8cc, #f1c0e8, #90dbf4, #b9fbc0);}
-#mono {background-image: linear-gradient(to right, #f8f9fa, #ced4da, #495057, #212529);}
-#vintage {background-image: linear-gradient(to right, #797d62, #d9ae94, #ffcb69, #d08c60, #997b66);}
+.palette>button:hover {
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.palette>button:focus {
+    border: 3px solid #343A40;
+}
+
+
+
+.buttons>button {
+    font-family: Helvetica, Arial, sans-serif;
+    font-size: 1.2em;
+    color: #FFF6F8;
+    border: 1px solid #ADB5BD;
+    border-radius: 2px;
+    background-color: #da627d;
+    padding: 0.2em 0.5em;
+    margin: 0;
+}
+
+p {
+    font-family: 'Indie Flower', cursive;
+    font-size: 2em;
+    margin: 0;
+}
+
+#red {
+    background-color: #c81d25;
+}
+
+#orange {
+    background-color: #f8961e;
+}
+
+#yellow {
+    background-color: #fad643;
+}
+
+#green {
+    background-color: #5fad56;
+}
+
+#blue {
+    background-color: #4ea8de;
+}
+
+#purple {
+    background-color: #b185db;
+}
+
+#black {
+    background-color: #000;
+}
+
+#white {
+    background-color: #fff;
+}
+
+#rainbow {
+    background-image: linear-gradient(to right, #54478c, #048ba8, #83e377, #efea5a, #f29e4c);
+}
+
+#pastel {
+    background-image: linear-gradient(to right, #fbf8cc, #f1c0e8, #90dbf4, #b9fbc0);
+}
+
+#mono {
+    background-image: linear-gradient(to right, #f8f9fa, #ced4da, #495057, #212529);
+}
+
+#vintage {
+    background-image: linear-gradient(to right, #797d62, #d9ae94, #ffcb69, #d08c60, #997b66);
+}
