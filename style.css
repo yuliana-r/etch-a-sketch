@@ -2,6 +2,8 @@
     border: 1px solid #000;
 } */
 
+@import url('https://fonts.googleapis.com/css2?family=Indie+Flower&display=swap');
+
 body,
 html {
     height: 100%;
@@ -9,7 +11,11 @@ html {
 }
 
 body {
-    background-color: #fffcf2;
+    background-color: #e9ecef;
+}
+
+h1 {
+    font-family: 'Indie Flower', cursive;
 }
 
 .container,
@@ -22,7 +28,7 @@ body {
 .container {
     flex-direction: column;
     gap: 2em;
-    height: 100%;
+    min-height: 100%;
 }
 
 .content {
@@ -33,23 +39,23 @@ body {
     display: flex;
     flex-direction: column;
     background-color: #fff;
-    width: 500px;
-    height: 500px;
+    width: 550px;
+    height: 550px;
 }
 
 .row {
-    display: flex;
+    display: flex; 
     flex: 1 0 auto;
 }
 
 .pixel {
     flex: 1 0 auto;
-    border: 1px solid #818181;
+    border: 1px solid #e9ecef;
 }
 
 .setting {
     height: 25em;
-    width: 25em;
+    width: 20em;
 }
 
 .slidecontainer {
@@ -91,6 +97,22 @@ body {
     cursor: pointer;
 }
 
-.black {
-    background-color: #000;
+.palette>button {
+    border-radius: 100%;
+    width: 3em;
+    height: 3em;
+    border: 1px solid #6c757d;
 }
+
+#red {background-color: #c81d25;}
+#orange {background-color: #f8961e;}
+#yellow {background-color: #fad643;}
+#green {background-color: #5fad56;}
+#blue {background-color: #4ea8de;}
+#purple {background-color: #b185db;}
+#black {background-color: #000;}
+#white {background-color: #fff;}
+#rainbow {background-image: linear-gradient(to right, #54478c, #048ba8, #83e377, #efea5a, #f29e4c);}
+#pastel {background-image: linear-gradient(to right, #fbf8cc, #f1c0e8, #90dbf4, #b9fbc0);}
+#mono {background-image: linear-gradient(to right, #f8f9fa, #ced4da, #495057, #212529);}
+#vintage {background-image: linear-gradient(to right, #797d62, #d9ae94, #ffcb69, #d08c60, #997b66);}
