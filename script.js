@@ -114,6 +114,7 @@ function deleteGrid() {
 }
 
 function resetGrid() {
+    CURRENT_COLOR = "";
     const squares = document.querySelectorAll('.pixel');
     squares.forEach(function (element) {
         element.style = "null";

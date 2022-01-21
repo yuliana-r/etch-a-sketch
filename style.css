@@ -62,7 +62,7 @@ a:hover {
 
 .content {
     align-items: center;
-    gap: 1em;
+    gap: 2em;
 }
 
 .setting {
@@ -150,7 +150,8 @@ a:hover {
     border: 1px solid #ADB5BD;
 }
 
-.palette>button:hover {
+.palette>button:hover,
+.buttons>button:hover {
     opacity: 0.8;
     cursor: pointer;
 }
@@ -159,15 +160,13 @@ a:hover {
     border: 3px solid #343A40;
 }
 
-
-
 .buttons>button {
     font-family: Helvetica, Arial, sans-serif;
     font-size: 1.2em;
-    color: #FFF6F8;
-    border: 1px solid #ADB5BD;
-    border-radius: 2px;
-    background-color: #da627d;
+    color: #f8f9fa;
+    border: 1px solid #495057;
+    border-radius: 5px;
+    background-color: #6C757D;
     padding: 0.2em 0.5em;
     margin: 0;
 }
