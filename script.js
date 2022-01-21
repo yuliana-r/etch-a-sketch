@@ -39,7 +39,7 @@ const vintageColors = ['#797D62', '#9B9B7A', '#BAA587', '#D9AE94', '#F1DCA7',
 
 function addHoverColor() {
     const squares = document.querySelectorAll('.pixel');
-    squares.forEach(square => square.addEventListener('mouseenter', () => {
+    squares.forEach(square => square.addEventListener('click', () => {
 
         switch (CURRENT_COLOR) {
 
