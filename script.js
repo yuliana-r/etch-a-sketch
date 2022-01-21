@@ -37,6 +37,9 @@ const vintageColors = ['#797D62', '#9B9B7A', '#BAA587', '#D9AE94', '#F1DCA7',
     '#FFCB69', '#E8AC65', '#D08C60', '#B58463', '#997B66'
 ];
 
+
+// Colour square on click
+
 function addHoverColor() {
     const squares = document.querySelectorAll('.pixel');
     squares.forEach(square => square.addEventListener('click', () => {
@@ -94,6 +97,7 @@ function addHoverColor() {
     }))
 };
 
+
 function makeGrid(size) {
     for (let i = 0; i < size; i++) {
         const row = document.createElement('div');
@@ -112,6 +116,7 @@ function makeGrid(size) {
 function deleteGrid() {
     grid.textContent = '';
 }
+
 
 function resetGrid() {
     CURRENT_COLOR = "";
