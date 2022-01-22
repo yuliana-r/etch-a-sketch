@@ -9,17 +9,17 @@ const resetBtn = document.getElementById('reset').addEventListener('click', () =
 // Colours
 
 const black = document.getElementById('black').addEventListener('click', () => CURRENT_COLOR = 'black');
-const yellow = document.getElementById('yellow').addEventListener('click', () => CURRENT_COLOR = 'yellow');
+const yellow = document.getElementById('yellow').addEventListener('click', () => CURRENT_COLOR = '#fad643');
 const white = document.getElementById('white').addEventListener('click', () => CURRENT_COLOR = 'white');
-const orange = document.getElementById('orange').addEventListener('click', () => CURRENT_COLOR = 'orange');
-const purple = document.getElementById('purple').addEventListener('click', () => CURRENT_COLOR = 'purple');
-const blue = document.getElementById('blue').addEventListener('click', () => CURRENT_COLOR = 'blue');
-const green = document.getElementById('green').addEventListener('click', () => CURRENT_COLOR = 'green');
-const red = document.getElementById('red').addEventListener('click', () => CURRENT_COLOR = 'red');
-const rainbow = document.getElementById('rainbow').addEventListener('click', () => CURRENT_COLOR = 'rainbow');
-const pastel = document.getElementById('pastel').addEventListener('click', () => CURRENT_COLOR = 'pastel');
-const mono = document.getElementById('mono').addEventListener('click', () => CURRENT_COLOR = 'mono');
-const vintage = document.getElementById('vintage').addEventListener('click', () => CURRENT_COLOR = 'vintage');
+const orange = document.getElementById('orange').addEventListener('click', () => CURRENT_COLOR = '#f8961e');
+const purple = document.getElementById('purple').addEventListener('click', () => CURRENT_COLOR = '##b185db');
+const blue = document.getElementById('blue').addEventListener('click', () => CURRENT_COLOR = '#4ea8de');
+const green = document.getElementById('green').addEventListener('click', () => CURRENT_COLOR = '#5fad56');
+const red = document.getElementById('red').addEventListener('click', () => CURRENT_COLOR = '#c81d25');
+const rainbow = document.getElementById('rainbow').addEventListener('click', () => CURRENT_COLOR = rainbowColors);
+const pastel = document.getElementById('pastel').addEventListener('click', () => CURRENT_COLOR = pastelColors);
+const mono = document.getElementById('mono').addEventListener('click', () => CURRENT_COLOR = monoColors);
+const vintage = document.getElementById('vintage').addEventListener('click', () => CURRENT_COLOR = vintageColors);
 
 const pastelColors = ['#FBF8CC', '#FDE4CF', '#FFCFD2', 'F1C0E8', '#CFBAF0',
     '#A3C4F3', '#90DBF4', '#8EECF5', '#98F5E1', '#B9FBC0'
@@ -44,56 +44,11 @@ function addHoverColor() {
     const squares = document.querySelectorAll('.pixel');
     squares.forEach(square => square.addEventListener('click', () => {
 
-        switch (CURRENT_COLOR) {
-
-            case 'rainbow':
-                square.style.backgroundColor = rainbowColors[Math.floor(Math.random() * rainbowColors.length)];
-                break;
-
-            case 'pastel':
-                square.style.backgroundColor = pastelColors[Math.floor(Math.random() * pastelColors.length)];
-                break;
-
-            case 'mono':
-                square.style.backgroundColor = monoColors[Math.floor(Math.random() * monoColors.length)];
-                break;
-
-            case 'vintage':
-                square.style.backgroundColor = vintageColors[Math.floor(Math.random() * vintageColors.length)];
-                break;
-
-            case 'black':
-                square.style.backgroundColor = "black";
-                break;
-
-            case 'yellow':
-                square.style.backgroundColor = "#fad643";
-                break;
-
-            case 'white':
-                square.style.backgroundColor = "white";
-                break;
-
-            case 'orange':
-                square.style.backgroundColor = "#f8961e";
-                break;
-
-            case 'purple':
-                square.style.backgroundColor = "#b185db";
-                break;
-
-            case 'blue':
-                square.style.backgroundColor = "#4ea8de";
-                break;
-
-            case 'green':
-                square.style.backgroundColor = "#5fad56";
-                break;
-
-            case 'red':
-                square.style.backgroundColor = "#c81d25";
-                break;
-        }
+        if (typeof(CURRENT_COLOR) === "string") {
+            square.style.backgroundColor = CURRENT_COLOR;
+        } else {
+            square.style.backgroundColor = CURRENT_COLOR[Math.floor(Math.random() * CURRENT_COLOR.length)]
+         };
     }))
 };
 
