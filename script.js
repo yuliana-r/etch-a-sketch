@@ -88,7 +88,7 @@ function resetGrid() {
 }
 
 function gridOnOff() {
-    
+
 }
 
 removeGridBtn.addEventListener('click', () => {
@@ -96,12 +96,12 @@ removeGridBtn.addEventListener('click', () => {
 
     if (removeGridBtn.textContent === 'grid: ON') {
         squares.forEach(square => square.style.borderStyle = "none");
-    removeGridBtn.textContent = "grid: OFF";
+        removeGridBtn.textContent = "grid: OFF";
     } else {
         squares.forEach(square => square.style.borderStyle = "solid");
-    removeGridBtn.textContent = "grid: ON";
+        removeGridBtn.textContent = "grid: ON";
     }
-    
+
 
 });
 
