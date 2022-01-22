@@ -1,4 +1,7 @@
 let CURRENT_COLOR;
+let mouseDown = 0;
+document.body.onmousedown = () => mouseDown = 1;
+document.body.onmouseup = () => mouseDown = 0;
 
 const slider = document.getElementById('mySlider');
 const currentSize = document.getElementById('currentSize');
@@ -12,7 +15,7 @@ const black = document.getElementById('black').addEventListener('click', () => C
 const yellow = document.getElementById('yellow').addEventListener('click', () => CURRENT_COLOR = '#fad643');
 const white = document.getElementById('white').addEventListener('click', () => CURRENT_COLOR = 'white');
 const orange = document.getElementById('orange').addEventListener('click', () => CURRENT_COLOR = '#f8961e');
-const purple = document.getElementById('purple').addEventListener('click', () => CURRENT_COLOR = '##b185db');
+const purple = document.getElementById('purple').addEventListener('click', () => CURRENT_COLOR = '#b185db');
 const blue = document.getElementById('blue').addEventListener('click', () => CURRENT_COLOR = '#4ea8de');
 const green = document.getElementById('green').addEventListener('click', () => CURRENT_COLOR = '#5fad56');
 const red = document.getElementById('red').addEventListener('click', () => CURRENT_COLOR = '#c81d25');
@@ -38,19 +41,22 @@ const vintageColors = ['#797D62', '#9B9B7A', '#BAA587', '#D9AE94', '#F1DCA7',
 ];
 
 
-// Colour square on click
+// Colour square if mouse is clicked
 
 function addHoverColor() {
     const squares = document.querySelectorAll('.pixel');
-    squares.forEach(square => square.addEventListener('click', () => {
+    squares.forEach(square => square.addEventListener('mouseover', () => {
 
-        if (typeof(CURRENT_COLOR) === "string") {
-            square.style.backgroundColor = CURRENT_COLOR;
-        } else {
-            square.style.backgroundColor = CURRENT_COLOR[Math.floor(Math.random() * CURRENT_COLOR.length)]
-         };
+        if (mouseDown) {
+            if (typeof (CURRENT_COLOR) === "string") {
+                square.style.backgroundColor = CURRENT_COLOR;
+            } else {
+                square.style.backgroundColor = CURRENT_COLOR[Math.floor(Math.random() * CURRENT_COLOR.length)]
+            };
+        }
     }))
 };
+
 
 
 function makeGrid(size) {
