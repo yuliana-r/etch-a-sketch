@@ -87,9 +87,22 @@ function resetGrid() {
     })
 }
 
+function gridOnOff() {
+    
+}
+
 removeGridBtn.addEventListener('click', () => {
     const squares = document.querySelectorAll('.pixel');
-    squares.forEach(square => square.style.borderStyle = "none");
+
+    if (removeGridBtn.textContent === 'grid: ON') {
+        squares.forEach(square => square.style.borderStyle = "none");
+    removeGridBtn.textContent = "grid: OFF";
+    } else {
+        squares.forEach(square => square.style.borderStyle = "solid");
+    removeGridBtn.textContent = "grid: ON";
+    }
+    
+
 });
 
 slider.oninput = function () {
