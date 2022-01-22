@@ -97,6 +97,7 @@ p {
 .content {
     align-items: center;
     gap: 2em;
+    flex-wrap: wrap;
 }
 
 .setting {
@@ -139,7 +140,8 @@ p {
     background-color: #fff;
     width: 550px;
     height: 550px;
-    border: 1px solid #ADB5BD;
+    border: 2px solid #ADB5BD;
+    border-bottom: 2px solid #ADB5BD;
 }
 
 .slider {
