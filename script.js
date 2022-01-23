@@ -1,13 +1,13 @@
 let CURRENT_COLOR;
-let mouseDown = 0;
-document.body.onmousedown = () => mouseDown = 1;
-document.body.onmouseup = () => mouseDown = 0;
+let mouseDown = false;
 
 const slider = document.getElementById('mySlider');
 const currentSize = document.getElementById('currentSize');
 const grid = document.getElementById('grid');
 const removeGridBtn = document.getElementById('removeGrid');
 const resetBtn = document.getElementById('reset').addEventListener('click', () => resetGrid());
+document.body.onmousedown = () => mouseDown = true;
+document.body.onmouseup = () => mouseDown = false;
 
 // Colours
 
