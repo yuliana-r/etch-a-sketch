@@ -1,11 +1,14 @@
-# etch-a-sketch
-Browser version of a pixelated sketchpad. 
-Completed as part of The Odin Project.
+# Etch-a-Sketch
+## Introduction
 
+This project is a simple browser version of a pixelated sketchpad. It is built using the standard front-end stack of HTML, CSS and JavaScript.
 
-<a href="https://yuliana-r.github.io/etch-a-sketch/" target="_blank">Live preview</a>
+The project primarily demonstrates and focuses on DOM manipulation.
 
-<img src="./images/demo.png">
-<img src="./images/demo-2.png">
+## Preview
 
-<a href="https://www.flaticon.com/free-icons/sketch" target="_blank">Tab icon source - Flaticon</a>
+[![Etch-a-Sketch](./demo.png)](https://yuliana-r.github.io/etch-a-sketch/)
+
+## Media credits:
+
+1. Flaticon: https://www.flaticon.com/free-icons/sketch
